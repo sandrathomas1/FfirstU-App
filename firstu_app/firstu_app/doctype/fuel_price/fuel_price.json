@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-04 20:39:50.948160",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "petrol_price",
+  "petrol_status_price",
+  "petrol_privilage_price",
+  "column_break_4",
+  "diesel_price",
+  "deisel_status_price",
+  "deisel_privilage_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "petrol_price",
+   "fieldtype": "Int",
+   "label": "Petrol Price"
+  },
+  {
+   "fieldname": "petrol_privilage_price",
+   "fieldtype": "Int",
+   "label": "Petrol Privilage Price"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diesel_price",
+   "fieldtype": "Int",
+   "label": "Diesel Price"
+  },
+  {
+   "fieldname": "deisel_privilage_price",
+   "fieldtype": "Int",
+   "label": "Diesel Privilage Price"
+  },
+  {
+   "fieldname": "petrol_status_price",
+   "fieldtype": "Int",
+   "label": "Petrol  Status Price"
+  },
+  {
+   "fieldname": "deisel_status_price",
+   "fieldtype": "Int",
+   "label": "Diesel Status Price"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-02-05 10:36:32.036415",
+ "modified_by": "Administrator",
+ "module": "Firstu App",
+ "name": "Fuel Price",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

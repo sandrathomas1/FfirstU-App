@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:customer",
+ "creation": "2022-02-04 20:11:34.591709",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "phone",
+  "membership_type",
+  "section_break_5",
+  "vehicle_details",
+  "vehicle_type",
+  "vehicle_name",
+  "fuel_type",
+  "section_break_10",
+  "cashback_details",
+  "total_earned_cashback",
+  "balance_amount",
+  "received_amount",
+  "section_break_15",
+  "trophies_details",
+  "number_of_trophies",
+  "refuel_frequency"
+ ],
+ "fields": [
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "membership_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Membership Type",
+   "options": "\nSTATUS\nPRIVILAGE"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vehicle_details",
+   "fieldtype": "Heading",
+   "label": "Vehicle Details"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Vehicle Type",
+   "options": "\nCAR\nBIKE"
+  },
+  {
+   "fieldname": "vehicle_name",
+   "fieldtype": "Data",
+   "label": "Vehicle Name"
+  },
+  {
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "label": "Fuel Type",
+   "options": "\nPETROL\nDIESEL"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cashback_details",
+   "fieldtype": "Heading",
+   "label": "Cashback Details"
+  },
+  {
+   "fieldname": "total_earned_cashback",
+   "fieldtype": "Int",
+   "label": "Total Earned Cashback"
+  },
+  {
+   "fieldname": "balance_amount",
+   "fieldtype": "Int",
+   "label": "Balance Amount"
+  },
+  {
+   "fieldname": "received_amount",
+   "fieldtype": "Int",
+   "label": "Received Amount"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "trophies_details",
+   "fieldtype": "Heading",
+   "label": "Trophies Details"
+  },
+  {
+   "fieldname": "refuel_frequency",
+   "fieldtype": "Int",
+   "label": "Refuel Frequency"
+  },
+  {
+   "fieldname": "number_of_trophies",
+   "fieldtype": "Int",
+   "label": "Number Of Trophies"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer ",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-08 11:14:10.591088",
+ "modified_by": "Administrator",
+ "module": "Firstu App",
+ "name": "Customer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
