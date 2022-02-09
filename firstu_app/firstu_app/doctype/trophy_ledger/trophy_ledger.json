@@ -7,8 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "customer",
-  "status",
   "number_of_trophies",
+  "status",
   "amended_from"
  ],
  "fields": [
@@ -44,7 +44,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-02-08 11:57:19.055573",
+ "modified": "2022-02-09 09:30:15.397378",
  "modified_by": "Administrator",
  "module": "Firstu App",
  "name": "Trophy Ledger",

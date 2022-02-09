@@ -19,7 +19,6 @@
   "cashback_details",
   "total_earned_cashback",
   "balance_amount",
-  "received_amount",
   "section_break_15",
   "trophies_details",
   "number_of_trophies",
@@ -84,11 +83,6 @@
    "label": "Balance Amount"
   },
   {
-   "fieldname": "received_amount",
-   "fieldtype": "Int",
-   "label": "Received Amount"
-  },
-  {
    "fieldname": "section_break_15",
    "fieldtype": "Section Break"
   },
@@ -112,13 +106,12 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Customer ",
-   "reqd": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-08 11:14:10.591088",
+ "modified": "2022-02-09 11:11:05.257460",
  "modified_by": "Administrator",
  "module": "Firstu App",
  "name": "Customer",

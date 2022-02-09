@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "FP.#####",
  "creation": "2022-02-04 20:15:00.370342",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -23,8 +24,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Customer",
-   "options": "Customer",
-   "reqd": 1
+   "options": "Customer"
   },
   {
    "fieldname": "litre",
@@ -33,7 +33,7 @@
   },
   {
    "fieldname": "cashback",
-   "fieldtype": "Int",
+   "fieldtype": "Currency",
    "label": "Cashback"
   },
   {
@@ -80,7 +80,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-02-08 10:08:36.756267",
+ "modified": "2022-02-09 12:14:57.134109",
  "modified_by": "Administrator",
  "module": "Firstu App",
  "name": "Fuel Payments",

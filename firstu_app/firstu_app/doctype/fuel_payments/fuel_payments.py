@@ -19,32 +19,38 @@ class FuelPayments(Document):
 				self.firstu_price=c
 				self.litre =self.amount/ c
 				self.cashback=(self.litre * a)-(self.litre * c)
+				doc.total_earned_cashback =doc.total_earned_cashback + self.cashback
+				doc.customer=self.customer,
+				doc.save()
 			else:
 				self.current_fuel_price = a
 				self.firstu_price=d
 				self.litre =self.amount/d
 				self.cashback=(self.litre * a)-(self.litre * d)
+				doc.total_earned_cashback =doc.total_earned_cashback + self.cashback
+				doc.customer=self.customer,
+				doc.save()
 		else: 
 			if doc.fuel_type == 'DIESEL':
 				self.current_fuel_price=b
 				self.firstu_price= f
 				self.litre =self.amount / f
 				self.cashback=(self.litre * b)-(self.litre * f)
+				doc.total_earned_cashback =doc.total_earned_cashback+self.cashback
+				doc.customer=self.customer,
+				doc.save()
 				
 			else:
 				self.current_fuel_price=b
 				self.firstu_price = e
-				self.litre =self.amount /int(e)
+				self.litre =self.amount / e
 				self.cashback=(self.litre * b)-(self.litre * e)
+				doc.total_earned_cashback =doc.total_earned_cashback + self.cashback
+				doc.customer=self.customer,
+				doc.save()
 				#doc.save()
 	def before_submit(self): 
 		data=frappe.get_doc({'doctype':"Cashback Ledger",'customer':self.customer,'status':"Received",'amount':self.amount})
 		data.insert(ignore_permissions = True)
 		data.submit()
-	def update(self,d,customer):
-		d = frappe.get_doc({"doctype":"Customer",'customer_name':self.customer,"total_earned_cashback":self.cashback})
-		#a=frappe.db.get_value("Fuel Payment","cashback")
-		#d.total_earned_cashback = a
-		d.update()
-		#d.save()
-
+	
