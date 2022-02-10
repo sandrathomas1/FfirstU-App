@@ -12,19 +12,19 @@
  "fields": [
   {
    "fieldname": "refuel_frequency",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Refuel Frequency"
   },
   {
    "fieldname": "number_of_trophy",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Number Of Trophy"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-02-08 11:21:28.017865",
+ "modified": "2022-02-09 15:12:51.841836",
  "modified_by": "Administrator",
  "module": "Firstu App",
  "name": "Trophy Settings",

@@ -5,7 +5,15 @@ import frappe
 from frappe.model.document import Document
 
 class Customer(Document):
-	pass
+	
+	def before_save(self):
+		data=frappe.get_doc({
+		"doctype":"Customer",
+		'customer':self.customer,
+		'membership_type':self.membership_type,
+		'vehicle_type':self.vehicle_type,
+		'fuel_type':self.fuel_type
+		})
 	def validate(self): 
 #pass
 #doc=frappe.get_doc("Trophy Ledger",self.trophy_ledger)
@@ -17,4 +25,3 @@ class Customer(Document):
 			data=frappe.get_doc({'doctype':"trophy_ledger",'customer':self.customer,'number_of_trophies':self.number_of_trophies,'status':"CREDITED"})
 			data.insert(ignore_permissions = True)
 			data.submit()
-

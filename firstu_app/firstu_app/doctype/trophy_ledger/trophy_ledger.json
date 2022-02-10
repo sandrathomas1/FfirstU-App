@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "TL.#####",
  "creation": "2022-02-04 20:42:33.979017",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -21,7 +22,6 @@
    "reqd": 1
   },
   {
-   "fetch_from": "customer.total_trophies_earned",
    "fieldname": "number_of_trophies",
    "fieldtype": "Int",
    "label": "Number Of trophies"
@@ -44,7 +44,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-02-09 09:30:15.397378",
+ "modified": "2022-02-09 17:01:27.371366",
  "modified_by": "Administrator",
  "module": "Firstu App",
  "name": "Trophy Ledger",

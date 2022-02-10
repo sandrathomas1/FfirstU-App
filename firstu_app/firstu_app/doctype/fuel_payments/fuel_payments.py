@@ -20,7 +20,9 @@ class FuelPayments(Document):
 				self.litre =self.amount/ c
 				self.cashback=(self.litre * a)-(self.litre * c)
 				doc.total_earned_cashback =doc.total_earned_cashback + self.cashback
+				doc.balance_amount = doc.balance_amount + self.cashback
 				doc.customer=self.customer,
+				doc.refuel_frequency=doc.refuel_frequency + 1
 				doc.save()
 			else:
 				self.current_fuel_price = a
@@ -28,7 +30,9 @@ class FuelPayments(Document):
 				self.litre =self.amount/d
 				self.cashback=(self.litre * a)-(self.litre * d)
 				doc.total_earned_cashback =doc.total_earned_cashback + self.cashback
+				doc.balance_amount =doc.balance_amount+ self.cashback
 				doc.customer=self.customer,
+				doc.refuel_frequency=doc.refuel_frequency + 1
 				doc.save()
 		else: 
 			if doc.fuel_type == 'DIESEL':
@@ -37,7 +41,9 @@ class FuelPayments(Document):
 				self.litre =self.amount / f
 				self.cashback=(self.litre * b)-(self.litre * f)
 				doc.total_earned_cashback =doc.total_earned_cashback+self.cashback
+				doc.balance_amount =doc.balance_amount+ self.cashback
 				doc.customer=self.customer,
+				doc.refuel_frequency=doc.refuel_frequency + 1
 				doc.save()
 				
 			else:
@@ -46,9 +52,11 @@ class FuelPayments(Document):
 				self.litre =self.amount / e
 				self.cashback=(self.litre * b)-(self.litre * e)
 				doc.total_earned_cashback =doc.total_earned_cashback + self.cashback
+				doc.balance_amount =doc.balance_amount+ self.cashback
 				doc.customer=self.customer,
+				doc.refuel_frequency=doc.refuel_frequency + 1
 				doc.save()
-				#doc.save()
+				
 	def before_submit(self): 
 		data=frappe.get_doc({'doctype':"Cashback Ledger",'customer':self.customer,'status':"Received",'amount':self.amount})
 		data.insert(ignore_permissions = True)

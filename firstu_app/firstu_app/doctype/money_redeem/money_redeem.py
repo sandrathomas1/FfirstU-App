@@ -7,16 +7,12 @@ from frappe.model.document import Document
 class MoneyRedeem(Document):
 	def before_save(self):
 		doc=frappe.get_doc("Customer",self.customer)
-		if doc.total_earned_cashback > self.amount:
+		if doc.total_earned_cashback >= doc.balance_amount:
 			self.amount == doc.total_earned_cashback
-			doc.balance_amount = doc.total_earned_cashback -self.amount
+			doc.balance_amount = doc.balance_amount -self.amount
 			doc.customer=self.customer,
 			doc.save()
-			if doc.total_earned_cashback > doc.balance_amount:
-				self.amount == doc.balance_amount
-				doc.balance_amount = doc.balance_amount -self.amount
-				doc.customer=self.customer,
-				doc.save()
+			
 		else:
 			frappe.throw("insufficient balance")
 
